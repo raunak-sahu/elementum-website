@@ -1,0 +1,160 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700&display=swap');
+@import "tailwindcss";
+
+/* 1. Define the local font */
+@font-face {
+  font-family: 'Gerbil';
+  src: url('./assets/fonts/gerbil.woff2') format('woff2'),
+       url('./assets/fonts/gerbil.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@import "tailwindcss";
+
+
+body {
+  font-family: "Syne", sans-serif;
+  background-color: #f6f6f4;
+  margin: 0;
+}
+@import "tailwindcss";
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Syne", sans-serif;
+  background-color: #f6f6f4;
+  margin: 0;
+}
+body {
+  font-family: "Syne", sans-serif;
+  background: #f4f4f1;
+}
+body {
+  background: #f4f4f1;
+  overflow-x: hidden;
+}
+body{
+  font-family:"Syne",sans-serif;
+}
+body {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  background: #f6f6f4;
+}
+body {
+  font-family: 'Outfit', sans-serif;
+}
+body {
+  font-family: 'Gerbil', sans-serif;
+  background: #f6f6f4;
+  overflow-x: hidden;
+}
+.headline-text {
+    font-family: 'Gerbil', sans-serif;
+    font-size: 64px; /* Adjust based on the exact Figma property */
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+}
+.clip-triangle {
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.copyright-text {
+  text-align: center;
+  width: 100%; /* Ensures it spans the full width of the footer */
+}
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float {
+  animation: float 5s ease-in-out infinite;
+}
+/* Floating Images */
+
+@keyframes float {
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.float {
+  animation: float 5s ease-in-out infinite;
+}
+
+/* SVG Draw */
+
+@keyframes draw {
+  from {
+    stroke-dashoffset: 1000;
+  }
+
+  to {
+    stroke-dashoffset: 0;
+  }
+}
+
+.draw-line {
+  stroke-dasharray: 1000;
+  stroke-dashoffset: 1000;
+  animation: draw 4s linear infinite;
+}
+
+/* Slow Rotate Shapes */
+
+@keyframes rotateSlow {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.rotate-slow {
+  animation: rotateSlow 20s linear infinite;
+}
+
+/* Glow */
+
+.glow-hover:hover {
+  box-shadow:
+    0 0 40px rgba(255,107,107,.3),
+    0 0 80px rgba(255,107,107,.2);
+}
+section {
+  cursor: default;
+}
+
+section:hover {
+  transition: all 0.5s ease;
+}
+
+img {
+  transition: all 0.5s ease;
+}
+
+img:hover {
+  transform: scale(1.04);
+}
