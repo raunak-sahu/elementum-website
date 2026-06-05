@@ -19,37 +19,29 @@ function Navbar({ darkMode, setDarkMode }) {
       `}
     >
       <nav className="max-w-[1400px] mx-auto px-6 py-5">
-
-        <div className="grid grid-cols-3 items-center">
-
+        {/* Top Row */}
+        <div className="flex items-center justify-between">
           {/* Logo */}
-          <div>
-            <a
-              href="#home"
-              className={`
-                text-2xl
-                font-semibold
-                tracking-tight
-                transition-all
-                duration-300
-                hover:opacity-80
-                ${
-                  darkMode
-                    ? "text-white"
-                    : "text-black"
-                }
-              `}
-            >
-              Elementum
-            </a>
-          </div>
+          <a
+            href="#home"
+            className={`
+              text-2xl
+              font-semibold
+              tracking-tight
+              transition-all
+              duration-300
+              hover:opacity-80
+              ${darkMode ? "text-white" : "text-black"}
+            `}
+          >
+            Elementum
+          </a>
 
-          {/* Center Navigation */}
+          {/* Desktop Navigation */}
           <ul
             className="
               hidden
               lg:flex
-              justify-center
               items-center
               gap-12
               text-sm
@@ -80,11 +72,7 @@ function Navbar({ darkMode, setDarkMode }) {
                     after:transition-all
                     after:duration-300
                     hover:after:w-full
-                    ${
-                      darkMode
-                        ? "text-white"
-                        : "text-black"
-                    }
+                    ${darkMode ? "text-white" : "text-black"}
                   `}
                 >
                   {label}
@@ -93,10 +81,9 @@ function Navbar({ darkMode, setDarkMode }) {
             ))}
           </ul>
 
-          {/* Right Side */}
-          <div className="flex justify-end items-center gap-4">
-
-            {/* Theme Toggle */}
+          {/* Right Controls */}
+          <div className="flex items-center gap-3">
+            {/* Dark Mode Toggle */}
             <button
               onClick={() => setDarkMode(!darkMode)}
               className={`
@@ -120,10 +107,11 @@ function Navbar({ darkMode, setDarkMode }) {
               {darkMode ? "☀️" : "🌙"}
             </button>
 
-            {/* Figma Style Menu */}
+            {/* Mobile Menu Button */}
             <button
               onClick={() => setMenuOpen(!menuOpen)}
               className={`
+                lg:hidden
                 text-4xl
                 leading-none
                 font-light
@@ -137,11 +125,9 @@ function Navbar({ darkMode, setDarkMode }) {
                 }
               `}
             >
-              =
+              {menuOpen ? "×" : "="}
             </button>
-
           </div>
-
         </div>
 
         {/* Mobile Menu */}
@@ -162,28 +148,58 @@ function Navbar({ darkMode, setDarkMode }) {
               }
             `}
           >
-            <ul className="flex flex-col gap-5 text-center">
-
+            <ul
+              className={`
+                flex
+                flex-col
+                gap-6
+                text-center
+                text-lg
+                ${
+                  darkMode
+                    ? "text-white"
+                    : "text-black"
+                }
+              `}
+            >
               <li>
-                <a href="#home">Home</a>
+                <a
+                  href="#home"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Home
+                </a>
               </li>
 
               <li>
-                <a href="#studio">Studio</a>
+                <a
+                  href="#studio"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Studio
+                </a>
               </li>
 
               <li>
-                <a href="#services">Services</a>
+                <a
+                  href="#services"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Services
+                </a>
               </li>
 
               <li>
-                <a href="#contact">Contact</a>
+                <a
+                  href="#contact"
+                  onClick={() => setMenuOpen(false)}
+                >
+                  Contact
+                </a>
               </li>
-
             </ul>
           </div>
         )}
-
       </nav>
     </header>
   );

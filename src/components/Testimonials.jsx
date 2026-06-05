@@ -1,5 +1,6 @@
 import team2 from "../assets/images/team2.jpg";
 import ZigzagUnderline from "./ZigzagUnderline";
+
 import image1 from "../assets/images/image1.jpg";
 import image2 from "../assets/images/image2.jpg";
 import image3 from "../assets/images/image3.jpg";
@@ -11,55 +12,237 @@ import image8 from "../assets/images/image8.jpg";
 
 function Testimonials() {
   return (
-<section
+  <section
+  id="services"
   className="
-    relative
+  relative
     max-w-7xl
     mx-auto
+
     px-6
-    py-40
-    overflow-hidden
+    sm:px-8
+    lg:px-10
+
+    py-20
+    md:py-28
+    lg:py-40
+
+    mt-10
+    md:mt-16
+    lg:mt-24
+
     transition-all
     duration-500
-    hover:-translate-y-3
-    hover:scale-[1.01]
   "
 >
+      {/* Decorative Shapes */}
+{/* Desktop Purple Shape */}
+<div
+  className="
+    hidden
+    md:block
+    absolute
+    left-0
+    top-24
+    w-24
+    h-24
+    bg-purple-500
+    rounded-bl-full
+  "
+></div>
+{/* Mobile Purple Shape */}
+<div
+  className="
+    md:hidden
+    absolute
+    left-2
+    top-8
+    w-8
+    h-8
+    bg-purple-500
+    rounded-bl-full
+    opacity-80
+  "
+></div>
+{/* Desktop Pink Shape */}
 
+<div
+  className="
+    hidden
+    md:block
+    absolute
+    right-6
+    top-24
+    w-16
+    h-16
+    bg-pink-200
+    rounded-full
+    opacity-80
+    z-0
+  "
+/>
 
-      {/* Purple Shape */}
-      <div className="absolute left-0 top-24 w-24 h-24 bg-purple-500 rounded-bl-full"></div>
+{/* Mobile Pink Shape */}
+<div
+  className="
+    md:hidden
+    absolute
+    right-2
+    top-12
+    w-8
+    h-8
+    bg-pink-200
+    rounded-full
+  "
+></div>
 
-      {/* Pink Shape */}
-      <div className="absolute right-12 top-40 w-20 h-20 bg-pink-200 rounded-full"></div>
-
+      
       {/* Heading */}
-   <h2 className="text-center text-5xl md:text-7xl lg:text-8xl font-light leading-[0.95]">
+<h2
+  className="
+    relative
+    z-10
+    text-center
+    text-4xl
+    sm:text-5xl
+    md:text-7xl
+    lg:text-8xl
+    font-light
+    leading-[1]
+  "
+>
+  <div className="flex flex-wrap justify-center items-center gap-2">
+    <span className="bg-green-100 px-4 py-1 rounded-full">
+      What
+    </span>
 
-  <span className="bg-green-100 px-4 py-1 rounded-full">
-    What
-  </span>{" "}
-
-  our customer
-  <br />
-says
-
-<span className="relative inline-block ml-3">
-  about us
-
-  <div className="absolute left-0 top-full">
-    <ZigzagUnderline width="180" />
+    <span>our customer</span>
   </div>
-</span>
 
+  <div className="mt-2">
+    says{" "}
+    <span className="relative inline-block">
+      about us
+
+      <div className="absolute left-0 top-full">
+        <div className="scale-75 sm:scale-90 lg:scale-100 origin-left">
+          <ZigzagUnderline width="180" />
+        </div>
+      </div>
+    </span>
+  </div>
 </h2>
-      {/* Yellow Stroke */}
-      <div className="flex justify-center mt-6">
-        <div className="w-48 h-1 bg-yellow-400 rounded-full rotate-[-3deg]"></div>
+
+
+  {/* Yellow Stroke */}
+<div className="relative z-10 flex justify-center mt-6">
+  <div className="w-48 h-1 bg-yellow-400 rounded-full rotate-[-3deg]" />
+</div>
+
+      {/* ================= MOBILE + TABLET ================= */}
+      <div className="lg:hidden mt-16">
+        {/* Top Avatars */}
+        <div className="flex justify-center flex-wrap gap-4 mb-8">
+          <img
+            src={image1}
+            alt=""
+            className="w-14 h-14 rounded-full object-cover shadow-lg"
+          />
+
+          <img
+            src={image2}
+            alt=""
+            className="w-16 h-16 rounded-full object-cover shadow-lg"
+          />
+
+          <img
+            src={image3}
+            alt=""
+            className="w-14 h-14 rounded-full object-cover shadow-lg"
+          />
+
+          <img
+            src={image4}
+            alt=""
+            className="w-16 h-16 rounded-full object-cover shadow-lg"
+          />
+        </div>
+
+        {/* Card */}
+        <div
+          className="
+            bg-white
+            rounded-[30px]
+            shadow-xl
+            px-6
+            sm:px-8
+            py-10
+            text-center
+          "
+        >
+          <img
+            src={team2}
+            alt=""
+            className="
+              w-16
+              h-16
+              rounded-full
+              object-cover
+              mx-auto
+              mb-6
+            "
+          />
+
+          <p className="text-gray-600 leading-relaxed text-sm sm:text-base">
+            Working with Elementum completely transformed
+            our online presence. Their strategic approach,
+            attention to detail, and commitment to results
+            exceeded our expectations. The team delivered
+            exceptional value while maintaining clear
+            communication throughout the project.
+          </p>
+
+          <div className="mt-8">
+            <h4 className="font-semibold text-lg">
+              Priya Sharma
+            </h4>
+
+            <p className="text-gray-400 text-sm">
+              Founder, Elevate Digital
+            </p>
+          </div>
+        </div>
+
+        {/* Bottom Avatars */}
+        <div className="flex justify-center flex-wrap gap-4 mt-8">
+          <img
+            src={image5}
+            alt=""
+            className="w-14 h-14 rounded-full object-cover shadow-lg"
+          />
+
+          <img
+            src={image6}
+            alt=""
+            className="w-16 h-16 rounded-full object-cover shadow-lg"
+          />
+
+          <img
+            src={image7}
+            alt=""
+            className="w-14 h-14 rounded-full object-cover shadow-lg"
+          />
+
+          <img
+            src={image8}
+            alt=""
+            className="w-16 h-16 rounded-full object-cover shadow-lg"
+          />
+        </div>
       </div>
 
-      {/* Main Layout */}
-      <div className="relative mt-24 max-w-6xl mx-auto h-[560px]">
+      {/* ================= DESKTOP ================= */}
+      <div className="hidden lg:block relative mt-24 max-w-6xl mx-auto h-[560px]">
 
         {/* LEFT IMAGES */}
 
@@ -77,10 +260,10 @@ says
             shadow-xl
             z-30
             transition-all
-duration-500
-hover:scale-110
-hover:-translate-y-3
-hover:shadow-2xl
+            duration-500
+            hover:scale-110
+            hover:-translate-y-3
+            hover:shadow-2xl
           "
         />
 
@@ -98,10 +281,10 @@ hover:shadow-2xl
             shadow-xl
             z-30
             transition-all
-duration-500
-hover:scale-110
-hover:-translate-y-3
-hover:shadow-2xl
+            duration-500
+            hover:scale-110
+            hover:-translate-y-3
+            hover:shadow-2xl
           "
         />
 
@@ -119,10 +302,10 @@ hover:shadow-2xl
             shadow-xl
             z-30
             transition-all
-duration-500
-hover:scale-110
-hover:-translate-y-3
-hover:shadow-2xl
+            duration-500
+            hover:scale-110
+            hover:-translate-y-3
+            hover:shadow-2xl
           "
         />
 
@@ -138,12 +321,12 @@ hover:shadow-2xl
             rounded-full
             object-cover
             shadow-xl
-            z-30transition-all
-duration-500
-hover:scale-110
-hover:-translate-y-3
-hover:shadow-2xl
-
+            z-30
+            transition-all
+            duration-500
+            hover:scale-110
+            hover:-translate-y-3
+            hover:shadow-2xl
           "
         />
 
@@ -163,10 +346,10 @@ hover:shadow-2xl
             shadow-xl
             z-30
             transition-all
-duration-500
-hover:scale-110
-hover:-translate-y-3
-hover:shadow-2xl
+            duration-500
+            hover:scale-110
+            hover:-translate-y-3
+            hover:shadow-2xl
           "
         />
 
@@ -184,10 +367,10 @@ hover:shadow-2xl
             shadow-xl
             z-30
             transition-all
-duration-500
-hover:scale-110
-hover:-translate-y-3
-hover:shadow-2xl
+            duration-500
+            hover:scale-110
+            hover:-translate-y-3
+            hover:shadow-2xl
           "
         />
 
@@ -205,10 +388,10 @@ hover:shadow-2xl
             shadow-xl
             z-30
             transition-all
-duration-500
-hover:scale-110
-hover:-translate-y-3
-hover:shadow-2xl
+            duration-500
+            hover:scale-110
+            hover:-translate-y-3
+            hover:shadow-2xl
           "
         />
 
@@ -226,10 +409,10 @@ hover:shadow-2xl
             shadow-xl
             z-30
             transition-all
-duration-500
-hover:scale-110
-hover:-translate-y-3
-hover:shadow-2xl
+            duration-500
+            hover:scale-110
+            hover:-translate-y-3
+            hover:shadow-2xl
           "
         />
 
@@ -250,7 +433,6 @@ hover:shadow-2xl
             top-20
           "
         >
-
           <img
             src={team2}
             alt=""
@@ -282,11 +464,9 @@ hover:shadow-2xl
               Founder, Elevate Digital
             </p>
           </div>
-
         </div>
 
       </div>
-
     </section>
   );
 }

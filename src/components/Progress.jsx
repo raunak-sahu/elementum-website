@@ -8,7 +8,7 @@ function Progress() {
     max-w-[1350px]
     mx-auto
     px-10
-    py-32
+ py-20 md:py-32 lg:py-40
     overflow-hidden
     transition-all
     duration-500
@@ -19,11 +19,39 @@ function Progress() {
       
 
       {/* Curved Arrow */}
-      <svg
-        className="absolute left-[22%] top-[36%] z-10"
-        width="700"
-        height="260"
-      >
+     {/* Desktop Arrow */}
+<svg
+  className="
+    hidden
+    lg:block
+    absolute
+    left-[22%]
+    top-[36%]
+    z-10
+  "
+  width="700"
+  height="260"
+>
+  {/* Mobile Arrow */}
+<svg
+  className="
+    lg:hidden
+    absolute
+    right-0
+    top-10
+    z-0
+    opacity-40
+  "
+  width="180"
+  height="80"
+>
+  <path
+    d="M0 40 C60 0 120 80 180 40"
+    stroke="#ff6b6b"
+    strokeWidth="2"
+    fill="none"
+  />
+</svg>
 <path
   className="draw-line"
   d="M0 140 C180 20 340 260 520 120"
@@ -44,8 +72,7 @@ function Progress() {
           strokeWidth="3"
         />
       </svg>
-
-      <div className="grid lg:grid-cols-[420px_1fr] gap-24 items-center">
+<div className="grid lg:grid-cols-[420px_1fr] gap-12 lg:gap-24 items-center">
 
         {/* LEFT IMAGE */}
         <div className="relative">
@@ -93,28 +120,51 @@ function Progress() {
         <div className="relative max-w-[760px]">
 
           {/* Red Rotated Square */}
-         <div
+{/* Desktop Red Square */}
+<div
   className="
+    hidden
+    md:block
     absolute
     right-0
     -top-10
-    w-32
-    h-32
+    w-24
+    h-24
+    lg:w-32
+    lg:h-32
     bg-[#ff6b6b]
     rotate-12
     rotate-slow
   "
 />
 
+{/* Mobile Pink Circle */}
+<div
+  className="
+    md:hidden
+    absolute
+    right-2
+    top-0
+    w-10
+    h-10
+    bg-pink-200
+    rounded-full
+  "
+/>
+
           <h2
-            className="
-              text-[62px]
-              lg:text-[90px]
-              leading-[0.92]
-              font-[300]
-              tracking-[-0.05em]
-            "
-          >
+  className="
+    text-[48px]
+    sm:text-[62px]
+    lg:text-[90px]
+    leading-[1]
+    lg:leading-[0.92]
+    font-[300]
+    tracking-[-0.05em]
+    relative
+    z-10
+  "
+>
             See how we can
             <br />
 
@@ -155,8 +205,7 @@ function Progress() {
               </svg>
             </span>
           </h2>
-
-          <p className="mt-10 max-w-md text-gray-600 leading-relaxed">
+<p className="mt-6 lg:mt-10 max-w-md text-gray-600 leading-relaxed">
             We add a layer of fearless insight and action that
             allows change makers to accelerate their progress
             in areas such as brand, design, digital, comms and

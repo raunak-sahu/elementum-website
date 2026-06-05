@@ -17,24 +17,33 @@ const services = [
 
 function Services() {
   return (
-    <section
-      id="services"
-      className="
-        max-w-7xl
-        mx-auto
-        px-6
-        py-40
-        transition-all
-        duration-500
-      "
-    >
+<section
+  id="services"
+  className="
+    max-w-7xl
+    mx-auto
+
+    px-6
+    sm:px-8
+    lg:px-10
+
+    py-20
+    md:py-28
+    lg:py-40
+
+    mt-10
+    md:mt-16
+    lg:mt-24
+  "
+>
       {/* HEADING */}
-      <div className="mb-24">
+<div className="mb-24 pl-6 md:pl-10 lg:pl-12">
         <h2
           className="
-            text-5xl
-            md:text-7xl
-            lg:text-[90px]
+       text-[42px]
+sm:text-5xl
+md:text-7xl
+lg:text-[90px]
             leading-[0.9]
             font-light
             tracking-[-0.05em]
@@ -57,7 +66,7 @@ function Services() {
       </div>
 
       {/* SERVICES */}
-      <div className="w-full">
+     <div className="w-full pl-6 md:pl-10 lg:pl-12">
         {services.map((service) => (
           <div
             key={service.title}

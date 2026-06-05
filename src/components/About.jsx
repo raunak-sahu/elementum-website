@@ -12,7 +12,7 @@ function About() {
         mx-auto
         px-10
         lg:px-16
-        py-40
+       py-20 md:py-28 lg:py-36
         overflow-hidden
 
         transition-all
@@ -43,6 +43,10 @@ function About() {
           opacity-30
         "
       />
+      {/* Mobile Decorations */}
+<div className="absolute top-20 right-6 w-10 h-10 bg-pink-200 rounded-full md:hidden" />
+
+<div className="absolute bottom-20 left-6 w-12 h-12 bg-purple-500 rounded-tl-[40px] md:hidden" />
 
       <div className="grid lg:grid-cols-2 gap-24 items-center">
 
@@ -50,23 +54,33 @@ function About() {
         <div>
 
           <h2
-            className="
-              text-[60px]
-              md:text-[85px]
-              lg:text-[110px]
-              leading-[0.9]
-              font-light
-              tracking-[-0.05em]
-            "
+    className="
+  text-[42px]
+  sm:text-[58px]
+  md:text-[80px]
+  lg:text-[110px]
+  xl:text-[120px]
+  leading-[0.95]
+  font-[300]
+  tracking-[-0.04em]
+"
           >
-            <span className="relative inline-block">
-              Tomorrow
+<div className="relative inline-block">
+  Tomorrow
 
-              <div className="absolute left-0 top-full mt-2">
-                <ZigzagUnderline width="220" />
-              </div>
-            </span>
-
+  <div
+    className="
+      hidden
+      lg:block
+      absolute
+      left-0
+      top-full
+      mt-3
+    "
+  >
+    <ZigzagUnderline width="220" />
+  </div>
+</div>
             <br />
 
             should
@@ -75,9 +89,9 @@ function About() {
 
             be better than{" "}
 
-            <span className="bg-[#dce8d8] px-6 rounded-full">
-              today
-            </span>
+<span className="bg-[#dce8d8] px-4 py-1 rounded-full -ml-4">
+  today
+</span>
           </h2>
 
           <p className="mt-10 text-gray-600 max-w-lg text-lg leading-relaxed">
